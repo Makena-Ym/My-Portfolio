@@ -39,7 +39,7 @@ I am a data analyst in the making, dedicated to transforming raw data into actio
 
 ### 📫 Let's Connect!
 * **Email:** [makenamugambi8@gmail.com](mailto:makena.gatere@gmail.com)
-* **Portfolio:** [Link to the website we just built]
+* **Portfolio:** [(https://github.com/Makena-Ym/My-Portfolio)]
 
 ---
 *“Data is a precious thing and will last longer than the systems themselves.” – Tim Berners-Lee*
