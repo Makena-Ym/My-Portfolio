@@ -1,4 +1,4 @@
-# Hi, I'm Yvonne Makena-G 👋
+# Hi, I'm Yvonne M Gatere 👋
 ### Data Analyst | Python • SQL • Excel • Power BI
 
 I am an upcoming data analyst and these are my projects! I am dedicated to transforming raw data into actionable insights, specializing in data wrangling, visualization, and building robust data architectures.
