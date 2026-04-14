@@ -38,7 +38,7 @@ I am a data analyst in the making, dedicated to transforming raw data into actio
 ---
 
 ### 📫 Let's Connect!
-* **Email:** [makenamugambi8@gmail.com](mailto:makena.gatere@gmail.com)
+* **Email:** [makenamugambi.gatere@gmail.com](mailto:makena.gatere@gmail.com)
 * **Portfolio:** [(https://github.com/Makena-Ym/My-Portfolio)]
 
 ---
