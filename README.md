@@ -1,11 +1,16 @@
- # Hi, I'm Yvonne Makena-G 👋 
+# Hi, I'm Yvonne Makena-G 👋
 ### Data Analyst | Python • SQL • Excel • Power BI
 
-I am a data analyst in the making, dedicated to transforming raw data into actionable insights. I specialize in data wrangling, visualization, and statistical analysis to solve real-world problems.
+I am an upcoming data analyst and these are my projects! I am dedicated to transforming raw data into actionable insights, specializing in data wrangling, visualization, and building robust data architectures.
 
 ---
 
 ### 🚀 Featured Projects
+
+#### 🏗️ [Data Warehouse Project](https://github.com/Makena-Ym/DataWarehouse-Project)
+* **The Goal:** Architected a centralized data warehouse to streamline reporting and ensure a single source of truth for business intelligence.
+* **Tech Stack:** SQL, ETL, Data Modeling.
+* **Key Insight:** Centralized disparate data sources to improve reporting speed and data integrity across the organization.
 
 #### 🛒 [Walmart Sales Analysis](https://github.com/Makena-Ym/Walmart-Sales-Analysis)
 * **The Goal:** Analyze historical sales data to identify high-performing branches and seasonal trends.
@@ -30,7 +35,6 @@ I am a data analyst in the making, dedicated to transforming raw data into actio
 ---
 
 ### 🛠 My Toolbox
-
 * **Languages:** Python (Pandas, NumPy, Scikit-learn), SQL (PostgreSQL, T-SQL)
 * **Visualization:** Power BI, Tableau, Matplotlib, Seaborn
 * **Tools:** Excel (Advanced), Jupyter Notebooks, Git/GitHub
@@ -38,8 +42,8 @@ I am a data analyst in the making, dedicated to transforming raw data into actio
 ---
 
 ### 📫 Let's Connect!
-* **Email:** [makenamugambi.gatere@gmail.com](mailto:makena.gatere@gmail.com)
-* **Portfolio:** [(https://github.com/Makena-Ym/My-Portfolio)]
+* **Email:** [makena.gatere@gmail.com](mailto:makena.gatere@gmail.com)
+* **Portfolio:** [https://makena-ym.github.io/My-Portfolio/](https://makena-ym.github.io/My-Portfolio/)
 
 ---
-*“Data is a precious thing and will last longer than the systems themselves.” – Tim Berners-Lee*
+*“Data is a precious thing and will last longer than the systems themselves.”* – Tim Berners-Lee
