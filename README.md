@@ -43,7 +43,7 @@ I am an upcoming data analyst and these are my projects! I am dedicated to trans
 
 ### 📫 Let's Connect!
 * **Email:** [makena.gatere@gmail.com](mailto:makena.gatere@gmail.com)
-* **Portfolio:** [https://makena-ym.github.io/My-Portfolio/](https://makena-ym.github.io/My-Portfolio/)
+* **Portfolio:** (https://makena-ym.github.io/My-Portfolio/)
 
 ---
 *“Data is a precious thing and will last longer than the systems themselves.”* – Tim Berners-Lee
