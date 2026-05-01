@@ -3,192 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yvonne M-Gatere | Portfolio</title>
+    <title>Yvonne M-Gatere | Data Analyst Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --bg: #fdfbf9;
-            --card-white: #ffffff;
-            --accent-brown: #5d4037;
-            --secondary-brown: #8d6e63;
-            --text-dark: #2d2422;
-            --text-light: #6d4c41;
-            --shadow: 0 15px 35px rgba(93, 64, 55, 0.12);
-            --border: #d7ccc8;
-        }
-
-        * { box-sizing: border-box; transition: all 0.3s ease; }
-
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: var(--bg);
-            color: var(--text-dark);
-            margin: 0;
-            line-height: 1.8;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 100px 10%;
-            background: #efebe9; 
-            gap: 60px;
-            flex-wrap: wrap;
-            border-bottom: 2px solid var(--border);
-        }
-
-        .hero-text { flex: 1; min-width: 320px; }
-        .hero-text h1 { font-size: 3.5rem; margin: 0; color: var(--accent-brown); letter-spacing: -1.5px; }
-        .hero-text p { font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin-top: 15px; }
-        
-        .profile-container { position: relative; }
-        .profile-img {
-            width: 280px;
-            height: 280px;
-            border-radius: 25px;
-            object-fit: cover;
-            transform: rotate(-2deg);
-            border: 10px solid white;
-            box-shadow: var(--shadow);
-        }
-
-        /* CONTAINER */
-        .container { max-width: 1200px; margin: auto; padding: 80px 25px; }
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            border-left: 6px solid var(--accent-brown);
-            padding-left: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* FEATURED PROJECT CARD */
-        .featured-card {
-            background: white;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-            margin-bottom: 60px;
-        }
-
-        .featured-header {
-            padding: 50px;
-            background: white;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .featured-header h3 { font-size: 2rem; margin: 10px 0; color: var(--accent-brown); }
-
-        /* IMAGE GRID - 2X2 STYLE */
-        .featured-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 30px;
-            padding: 40px;
-            background: #faf9f8;
-        }
-
-        .screenshot-item {
-            background: white;
-            border: 1px solid #eee;
-            border-radius: 18px;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-        }
-
-        .screenshot-item img {
-            width: 100%;
-            border-radius: 10px;
-            border: 1px solid #f0f0f0;
-            margin-bottom: 20px;
-        }
-
-        .screenshot-item h4 { margin: 0 0 10px 0; color: var(--accent-brown); font-size: 1.2rem; }
-        .screenshot-item p { font-size: 0.95rem; color: var(--text-light); margin: 0; }
-
-        /* TAGS */
-        .tag-row { margin-bottom: 20px; }
-        .tag {
-            background: #efebe9;
-            color: var(--accent-brown);
-            padding: 7px 15px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 800;
-            margin-right: 8px;
-            text-transform: uppercase;
-        }
-
-        /* SECONDARY GRID */
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
-        .project-card {
-            background: white;
-            border-radius: 20px;
-            padding: 35px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--accent-brown);
-            color: white;
-            padding: 14px 30px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 25px;
-            text-align: center;
-        }
-
-        .btn:hover { background: var(--secondary-brown); transform: translateY(-3px); }
-
-        /* CONTACT SECTION */
-        .contact-section {
-            background: #3e2723;
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            border-radius: 30px;
-            margin-bottom: 80px;
-        }
-
-        .qr-placeholder {
-            background: white;
-            padding: 15px;
-            display: inline-block;
-            border-radius: 15px;
-            margin-top: 20px;
-        }
-
-        footer { text-align: center; padding: 40px; color: var(--text-light); font-size: 0.9rem; }
-
-        @media (max-width: 768px) {
-            .hero { padding: 60px 5%; }
-            .hero-text h1 { font-size: 2.5rem; }
-            .featured-grid { grid-template-columns: 1fr; padding: 20px; }
-            .profile-img { width: 220px; height: 220px; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <section class="hero">
     <div class="hero-text">
-        <span class="tag" style="background:var(--accent-brown); color:white;">Portfolio 2026</span>
+        <span class="tag" style="background:var(--accent-brown); color:white;">Data Analyst Portfolio</span>
         <h1>Yvonne M-Gatere</h1>
-        <p>I am a Data Analyst driven by the <strong>Medallion Architecture</strong> mindset. I build scalable SQL pipelines and high-performance Power BI dashboards that turn raw numbers into business gold.</p>
+        <p>Expert in <strong>Medallion Architecture</strong>, SQL Server, and Power BI. I specialize in building end-to-end data pipelines that transform raw business data into actionable executive insights.</p>
         <div style="margin-top:30px;">
-            <a href="https://github.com/Makena-Ym" style="color: var(--accent-brown); text-decoration: none; font-weight: bold; font-size: 1.3rem;">
+            <a href="https://github.com/Makena-Ym" target="_blank" style="color: var(--accent-brown); text-decoration: none; font-weight: bold; font-size: 1.3rem;">
                 <i class="fab fa-github"></i> github.com/Makena-Ym
             </a>
         </div>
@@ -199,76 +26,78 @@
 </section>
 
 <div class="container">
-    
-    <h2 class="section-title">End-to-End: Global Electronics Strategic BI</h2>
+
+    <h2 class="section-title">Star Project: Global Electronics Strategic BI</h2>
     
     <div class="featured-card">
         <div class="featured-header">
             <div class="tag-row">
                 <span class="tag">SQL Server</span>
                 <span class="tag">Power BI</span>
-                <span class="tag">Data Engineering</span>
-                <span class="tag">DAX</span>
+                <span class="tag">Medallion Architecture</span>
             </div>
             <h3>Retail Intelligence Decision Support System</h3>
-            <p>A full-cycle analytics project transforming raw ERP CSV files into a multi-layered Data Warehouse. By pre-aggregating data in SQL Gold views, I achieved a 60% faster report refresh rate and delivered critical shipping efficiency insights.</p>
-            <a href="https://github.com/Makena-Ym/Global-Electronics" class="btn">Exploration Repository</a>
+            <p>This project showcases a full-scale data refinery process. I engineered a solution that takes messy ERP data through Bronze, Silver, and Gold SQL layers, resulting in high-performance Power BI reporting.</p>
+            <a href="https://github.com/Makena-Ym/Global-Electronics" target="_blank" class="btn">View Full Repository</a>
         </div>
 
         <div class="featured-grid">
             <div class="screenshot-item">
-                <img src="assets/sql-gold-layer-1.png" alt="SQL View Development">
-                <h4>Gold Layer Logic: Execution View</h4>
-                <p>This SQL view pre-joins Sales, Products, and Customers at the database level. By calculating metrics like <code>ShippingStatus</code> in T-SQL, I removed the heavy processing load from Power BI.</p>
+                <img src="assets/sql-gold-layer-1.png" alt="SQL Transformation Logic">
+                <h4>SQL Transformation Code</h4>
+                <p>Clean, documented T-SQL used to join 1M+ rows of sales and customer data into a performant Gold-layer view.</p>
             </div>
 
             <div class="screenshot-item">
-                <img src="assets/data-model-schema.png" alt="Power BI Star Schema">
-                <h4>Star Schema Architecture</h4>
-                <p>A clean Star Schema implementation. I established 1-to-Many relationships between Dimension tables and the central Sales Fact table to ensure accurate filtering and efficient DAX calculations.</p>
-            </div>
-
-            <div class="screenshot-item">
-                <img src="assets/executive-summary.png" alt="Executive Overview Dashboard">
-                <h4>Executive Strategic Summary</h4>
-                <p>A high-contrast C-Suite dashboard featuring profit sparklines and KPIs. It uses custom Canva background containers to guide focus to critical revenue spikes.</p>
-            </div>
-
-            <div class="screenshot-item">
-                <img src="assets/geographic-deep-dive.png" alt="Geographic Analysis Dashboard">
-                <h4>Geographic Deep-Dive</h4>
-                <p>This visual isolates market penetration and regional profitability. It highlights a 47% improvement in delivery times across global shipping hubs.</p>
+                <img src="assets/executive-summary.png" alt="Executive Dashboard">
+                <h4>Executive Dashboard</h4>
+                <p>High-level KPI tracking for stakeholders, highlighting a 47% improvement in delivery logistics.</p>
             </div>
         </div>
     </div>
 
-    <h2 class="section-title">Supporting Analytics Projects</h2>
+    <h2 class="section-title">Portfolio Index</h2>
     <div class="project-grid">
+        
         <div class="project-card">
-            <span class="tag">T-SQL</span>
+            <span class="tag">SQL Server</span>
+            <h3>World Layoffs Analysis</h3>
+            <p>Advanced data cleaning project resolving duplicates, handling nulls, and standardizing global datasets for trend visualization.</p>
+            <a href="https://github.com/Makena-Ym/WorldsLayoffs-Analysis" target="_blank" class="btn">View Scripts</a>
+        </div>
+
+        <div class="project-card">
+            <span class="tag">Excel • Power BI</span>
+            <h3>Coffee Sales Data Tracking</h3>
+            <p>Created interactive dashboards to track inventory and revenue trends for a retail coffee business.</p>
+            <a href="https://github.com/Makena-Ym/Coffee-Sales-Project" target="_blank" class="btn">View Dashboard</a>
+        </div>
+
+        <div class="project-card">
+            <span class="tag">Python • Pandas</span>
+            <h3>Walmart Sales Analysis</h3>
+            <p>Performed exploratory data analysis (EDA) to identify top-performing branches and seasonal sales spikes.</p>
+            <a href="https://github.com/Makena-Ym/Walmart-Sales-Analysis" target="_blank" class="btn">View Python Notebook</a>
+        </div>
+
+        <div class="project-card">
+            <span class="tag">Architecture</span>
             <h3>Data Warehouse Implementation</h3>
-            <p>A masterclass in schema design. I built a central repository for disparate data sources, focusing on normalization and ETL performance.</p>
-            <a href="https://github.com/Makena-Ym/DataWarehouse-Project" class="btn">View Architecture</a>
+            <p>Designing a scalable warehouse structure focusing on normalization and efficient ETL schema design.</p>
+            <a href="https://github.com/Makena-Ym/DataWarehouse-Project" target="_blank" class="btn">View Schema</a>
         </div>
 
         <div class="project-card">
             <span class="tag">Python</span>
             <h3>LEGO Evolution Analysis</h3>
-            <p>Using Pandas and Matplotlib, I performed a time-series analysis on 50 years of LEGO set data to uncover trends in theme licensing costs.</p>
-            <a href="https://github.com/Makena-Ym/Lego-sets-analysis" class="btn">View Study</a>
-        </div>
-
-        <div class="project-card">
-            <span class="tag">SQL Server</span>
-            <h3>World Layoffs Analysis</h3>
-            <p>Advanced data cleaning project resolving duplicates and missing values in global layoff datasets to prepare for trend visualization.</p>
-            <a href="https://github.com/Makena-Ym/WorldsLayoffs-Analysis" class="btn">View Clean Code</a>
+            <p>A time-series analysis of 50 years of LEGO set data using Pandas and Matplotlib.</p>
+            <a href="https://github.com/Makena-Ym/Lego-sets-analysis" target="_blank" class="btn">View Code</a>
         </div>
     </div>
 
     <section id="contact" class="contact-section" style="margin-top: 100px;">
         <h2>Ready to collaborate?</h2>
-        <p>Scan to send me an email directly or click below.</p>
+        <p>Scan the code below to email me directly or click the button.</p>
         
         <div class="qr-placeholder">
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=mailto:makena.gatere@gmail.com" alt="Email QR Code">
@@ -280,7 +109,7 @@
 </div>
 
 <footer>
-    <p>&copy; 2026 Yvonne M-Gatere | Built in Fayetteville, Arkansas</p>
+    <p>&copy; 2026 Yvonne M-Gatere | Fayetteville, Arkansas</p>
 </footer>
 
 </body>
