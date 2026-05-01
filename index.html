@@ -6,194 +6,126 @@
     <title>Yvonne M Gatere | Data Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* COLOR PALETTE: Brown & White */
         :root {
-            --primary: #fdfbf9;       /* Soft White Background */
-            --accent: #5d4037;        /* Deep Brown */
-            --secondary-brown: #8d6e63; /* Lighter Brown */
-            --text-main: #3e2723;     /* Dark Chocolate Text */
-            --text-muted: #6d4c41;    /* Muted Brown Text */
-            --card-bg: #ffffff;       /* Pure White Cards */
+            --bg: #f8f9fa;
+            --card-white: #ffffff;
+            --accent-brown: #5d4037;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
 
-        * { box-sizing: border-box; transition: all 0.3s ease; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text-dark); margin: 0; line-height: 1.6; }
+        
+        /* HERO SECTION */
+        .hero { display: flex; align-items: center; justify-content: center; padding: 100px 10%; background: white; gap: 50px; flex-wrap: wrap; }
+        .hero-text { flex: 1; min-width: 300px; }
+        .hero-text h1 { font-size: 3.5rem; margin: 0; color: var(--accent-brown); }
+        .hero-text p { font-size: 1.2rem; color: var(--text-light); max-width: 500px; }
+        
+        .profile-container { position: relative; }
+        .profile-img { width: 280px; height: 280px; border-radius: 30px; object-fit: cover; transform: rotate(-3deg); border: 8px solid white; box-shadow: var(--shadow); }
 
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            line-height: 1.7;
-            color: var(--text-main);
-            background: var(--primary);
-            margin: 0;
-            padding-bottom: 50px;
-        }
+        /* GRID SYSTEM */
+        .container { max-width: 1200px; margin: auto; padding: 50px 20px; }
+        .section-title { font-size: 2.5rem; margin-bottom: 40px; border-bottom: 3px solid var(--accent-brown); display: inline-block; }
+        
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .project-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid #eee; }
+        .project-content { padding: 25px; }
+        
+        /* IMAGE PLACEHOLDERS */
+        .screenshot-box { background: #f1f2f6; width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; color: #b2bec3; border-bottom: 1px solid #eee; overflow: hidden; }
+        .screenshot-box img { width: 100%; height: 100%; object-fit: cover; }
 
-        header {
-            padding: 4rem 2rem;
-            text-align: center;
-            background: #efebe9; 
-            border-bottom: 1px solid #d7ccc8;
-        }
+        .tag-row { margin-bottom: 15px; }
+        .tag { background: #efebe9; color: var(--accent-brown); padding: 5px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; margin-right: 5px; }
 
-        /* Profile Picture Styling */
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            margin-bottom: 1.5rem;
-        }
+        .btn { display: inline-block; background: var(--accent-brown); color: white; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 15px; }
+        .btn:hover { background: #3e2723; }
 
-        h1 { font-size: 3rem; margin: 0; letter-spacing: -1px; }
-        .accent-text { color: var(--accent); }
-        .subtitle { font-size: 1.1rem; color: var(--text-muted); max-width: 700px; margin: 0.5rem auto; }
-
-        .container { max-width: 1100px; margin: auto; padding: 0 2rem; }
-        section { margin-top: 5rem; }
-        h2 { font-size: 2rem; border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 2rem; }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid #d7ccc8;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card:hover {
-            border-color: var(--accent);
-            transform: translateY(-8px);
-            box-shadow: 0 10px 30px -10px rgba(93, 64, 55, 0.2);
-        }
-
-        .tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            color: var(--secondary-brown);
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 1.5rem;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .skills-flex { display: flex; flex-wrap: wrap; gap: 10px; }
-        .skill-pill {
-            background: #efebe9;
-            color: var(--accent);
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            border: 1px solid #d7ccc8;
-        }
-
-        footer {
-            margin-top: 6rem;
-            padding: 3rem 1rem;
-            border-top: 1px solid #d7ccc8;
-            text-align: center;
-        }
+        footer { text-align: center; padding: 50px; background: white; margin-top: 50px; }
     </style>
 </head>
 <body>
 
-<header>
-    <img src="profile.jpg" alt="Yvonne M Gatere" class="profile-img">
-    <div class="tag">👋 Welcome to my space</div>
-    <h1>I'm <span class="accent-text">Yvonne M Gatere</span></h1>
-    <p class="subtitle">Upcoming Data Analyst showcasing end-to-end data solutions 📊✨</p>
-    <p class="subtitle" style="font-size: 0.9rem; opacity: 0.8;">Python • SQL • Excel • Power BI</p>
-</header>
+<section class="hero">
+    <div class="hero-text">
+        <span class="tag">Available for Hire</span>
+        <h1>Yvonne M Gatere</h1>
+        <p>Data Analyst transforming raw datasets into strategic business stories. Expert in Medallion Architecture, SQL Server, and Power BI visualization.</p>
+        <div class="socials">
+            <a href="https://github.com/Makena-Ym" style="font-size: 1.5rem; color: var(--accent-brown);"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </div>
+    <div class="profile-container">
+        <img src="profile.jpg" alt="Yvonne Profile" class="profile-img">
+    </div>
+</section>
 
 <div class="container">
-    <section id="projects">
-        <h2>Selected Projects 📁</h2>
-        <div class="grid">
-            
-            <div class="card">
-                <div>
-                    <span class="tag">SQL Server • Power BI</span>
-                    <h3>Global Electronics Analytics 📈</h3>
-                    <p>Built a Medallion Architecture (Bronze to Gold) to analyze retail growth, logistics, and customer demographics for a global retailer.</p>
-                </div>
-                <a href="https://github.com/Makena-Ym/Global-Electronics" class="btn">View Project →</a>
-            </div>
+    <h2 class="section-title">Featured Projects</h2>
+    
+    <div class="project-grid">
 
-            <div class="card">
-                <div>
-                    <span class="tag">SQL • Data Warehousing</span>
-                    <h3>Data Warehouse Project 🏗️</h3>
-                    <p>Architected a centralized data warehouse to streamline reporting and ensure a single source of truth for business intelligence.</p>
-                </div>
-                <a href="https://github.com/Makena-Ym/DataWarehouse-Project" class="btn">View Architecture →</a>
+        <div class="project-card">
+            <div class="screenshot-box">
+                <img src="global-electronics-dashboard.png" alt="Power BI Dashboard Screenshot">
             </div>
-
-            <div class="card">
-                <div>
-                    <span class="tag">Python • Pandas</span>
-                    <h3>Walmart Sales Analysis 🛒</h3>
-                    <p>Identified seasonal trends and top-performing branches to optimize retail inventory using Python.</p>
+            <div class="project-content">
+                <div class="tag-row"><span class="tag">Power BI</span> <span class="tag">SQL Server</span></div>
+                <h3>Global Electronics Strategic Analytics</h3>
+                <p>End-to-end BI solution using Medallion Architecture. Built a data refinery process from ERP sources to a Gold-layer reporting dashboard.</p>
+                <div class="screenshot-box" style="height: 120px; margin-top: 10px;">
+                    <img src="sql-transformation-code.png" alt="SQL Code Snippet">
                 </div>
-                <a href="https://github.com/Makena-Ym/Walmart-Sales-Analysis" class="btn">View Code →</a>
-            </div>
-
-            <div class="card">
-                <div>
-                    <span class="tag">SQL Server</span>
-                    <h3>World Layoffs Cleaning 🌍</h3>
-                    <p>Transformed messy global datasets into structured, queryable databases using advanced T-SQL cleaning techniques.</p>
-                </div>
-                <a href="https://github.com/Makena-Ym/WorldsLayoffs-Analysis" class="btn">View Scripts →</a>
-            </div>
-
-            <div class="card">
-                <div>
-                    <span class="tag">Excel • Power BI</span>
-                    <h3>Coffee Sales Dashboard ☕</h3>
-                    <p>Interactive revenue tracking and customer behavior analysis for retail management.</p>
-                </div>
-                <a href="https://github.com/Makena-Ym/Coffee-Sales-Project" class="btn">View Dashboard →</a>
+                <a href="https://github.com/Makena-Ym/Global-Electronics" class="btn">View Project</a>
             </div>
         </div>
-    </section>
 
-    <section id="skills">
-        <h2>Technical Expertise 🛠️</h2>
-        <div class="skills-flex">
-            <div class="skill-pill">Power BI</div>
-            <div class="skill-pill">Python (Pandas/NumPy)</div>
-            <div class="skill-pill">T-SQL & PostgreSQL</div>
-            <div class="skill-pill">Data Wrangling</div>
-            <div class="skill-pill">Medallion Architecture</div>
-            <div class="skill-pill">Advanced Excel</div>
+        <div class="project-card">
+            <div class="screenshot-box">
+                <img src="dw-architecture.png" alt="Architecture Diagram">
+            </div>
+            <div class="project-content">
+                <div class="tag-row"><span class="tag">T-SQL</span> <span class="tag">Data Modeling</span></div>
+                <h3>Data Warehouse Implementation</h3>
+                <p>Designing a scalable warehouse structure for business intelligence, focusing on schema optimization and ETL efficiency.</p>
+                <a href="https://github.com/Makena-Ym/DataWarehouse-Project" class="btn">View Project</a>
+            </div>
         </div>
-    </section>
 
-    <footer>
-        <p>Let's connect! 🤝</p>
-        <div style="font-size: 1.5rem; margin-bottom: 20px;">
-            <a href="https://github.com/Makena-Ym" style="color: var(--accent); margin: 0 15px;"><i class="fab fa-github"></i></a>
-            <a href="mailto:makena.gatere@gmail.com" style="color: var(--accent); margin: 0 15px;"><i class="fas fa-envelope"></i></a>
+        <div class="project-card">
+            <div class="screenshot-box">
+                <img src="lego-viz.png" alt="Python Plot">
+            </div>
+            <div class="project-content">
+                <div class="tag-row"><span class="tag">Python</span> <span class="tag">Pandas</span></div>
+                <h3>LEGO Sets Trend Analysis</h3>
+                <p>Statistical analysis of set complexity and theme popularity over time using Jupyter Notebooks and Matplotlib.</p>
+                <a href="https://github.com/Makena-Ym/Lego-sets-analysis" class="btn">View Project</a>
+            </div>
         </div>
-        <p style="color: var(--text-muted); font-size: 0.8rem;">&copy; 2026 Yvonne M Gatere</p>
-    </footer>
+
+        <div class="project-card">
+            <div class="screenshot-box">
+                <img src="layoffs-cleaning.png" alt="Data Cleaning Script">
+            </div>
+            <div class="project-content">
+                <div class="tag-row"><span class="tag">SQL</span> <span class="tag">Data Cleaning</span></div>
+                <h3>World Layoffs Data Cleaning</h3>
+                <p>A masterclass in T-SQL data transformation. Handling nulls, duplicates, and inconsistent formatting in global tech layoff data.</p>
+                <a href="https://github.com/Makena-Ym/WorldsLayoffs-Analysis" class="btn">View Project</a>
+            </div>
+        </div>
+
+    </div>
 </div>
+
+<footer>
+    <p>Constructed by Yvonne M Gatere | 2026</p>
+    <p>Fayetteville, Arkansas • makenamugambi8@gmail.com</p>
+</footer>
 
 </body>
 </html>
