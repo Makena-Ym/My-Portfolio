@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yvonne M Gatere | Data Portfolio</title>
+    <title>Yvonne M-Gatere | Data Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* COLOR PALETTE: Brown & White */
@@ -34,7 +34,6 @@
             border-bottom: 1px solid #d7ccc8;
         }
 
-        /* Profile Picture Styling */
         .profile-img {
             width: 150px;
             height: 150px;
@@ -53,50 +52,150 @@
         section { margin-top: 5rem; }
         h2 { font-size: 2rem; border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 2rem; }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
+        /* Project Showcase Styling */
+        .featured-project {
             background: var(--card-bg);
-            padding: 2rem;
             border-radius: 12px;
             border: 1px solid #d7ccc8;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        .card:hover {
-            border-color: var(--accent);
-            transform: translateY(-8px);
-            box-shadow: 0 10px 30px -10px rgba(93, 64, 55, 0.2);
+        .project-content { padding: 2.5rem; }
+        
+        .screenshot-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 1rem 2.5rem 2.5rem;
         }
 
-        .tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            color: var(--secondary-brown);
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
+        .screenshot-gallery img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            cursor: zoom-in;
         }
 
-        .btn {
-            display: inline-block;
-            margin-top: 1.5rem;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
+        .screenshot-gallery img:hover { transform: scale(1.02); }
 
-        .skills-flex { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skills-flex { display: flex; flex-wrap: wrap; gap: 10px; margin: 1rem 0; }
         .skill-pill {
             background: #efebe9;
             color: var(--accent);
             padding: 6px 16px;
             border-radius: 50px;
-            font-size: 0.
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .btn-primary:hover { background: var(--secondary-brown); }
+
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #3e2723;
+            color: #d7ccc8;
+            margin-top: 5rem;
+        }
+
+        footer a { color: white; margin: 0 10px; font-size: 1.5rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="your-image.jpg" alt="Yvonne M-Gatere" class="profile-img">
+    <h1>Yvonne <span class="accent-text">M-Gatere</span></h1>
+    <p class="subtitle">Data Analyst | SQL Developer | Business Intelligence Specialist</p>
+    <div class="skills-flex" style="justify-content: center; margin-top: 1.5rem;">
+        <span class="skill-pill">SQL Server</span>
+        <span class="skill-pill">Power BI</span>
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">Data Engineering</span>
+    </div>
+</header>
+
+<div class="container">
+    
+    <section id="main-project">
+        <h2>Main Project: Global Electronics BI Solution</h2>
+        <div class="featured-project">
+            <div class="project-content">
+                <p class="tag" style="color: var(--accent); font-weight: bold; margin-bottom: 10px;">END-TO-END DATA ENGINEERING & ANALYTICS</p>
+                <p>This comprehensive project involved building a high-performance decision support system for a global retailer. Using a <strong>Medallion Architecture (Bronze, Silver, Gold)</strong> in SQL Server, I transformed fragmented raw data into actionable executive insights.</p>
+                
+                <div class="skills-flex">
+                    <span class="skill-pill">T-SQL Views</span>
+                    <span class="skill-pill">Star Schema</span>
+                    <span class="skill-pill">UI/UX Design</span>
+                    <span class="skill-pill">Medallion Architecture</span>
+                </div>
+
+                <h3>Key Business Outcomes:</h3>
+                <ul>
+                    <li><strong>Logistics Efficiency:</strong> Reduced average delivery times by 47% (from 7.29 to 3.83 days).</li>
+                    <li><strong>Profit Optimization:</strong> Identified high-margin categories (Audio) vs. high-volume categories (Computers).</li>
+                    <li><strong>Executive Transparency:</strong> Built a dynamic Data Dictionary and Glossary for full business-logic clarity.</li>
+                </ul>
+                
+                <a href="https://github.com/makena-ym/Global-Electronics-Analytics" target="_blank" class="btn-primary">View GitHub Repository</a>
+            </div>
+
+            <div class="screenshot-gallery">
+                <div>
+                    <img src="Screenshot-Exec-Summary.png" alt="Executive Summary Page">
+                    <p style="font-size: 0.8rem; margin-top: 8px;"><strong>Executive Summary:</strong> High-level KPIs with profit sparklines and category revenue trends for C-suite decision making.</p>
+                </div>
+                <div>
+                    <img src="Screenshot-Logistics.png" alt="Logistics Analysis Page">
+                    <p style="font-size: 0.8rem; margin-top: 8px;"><strong>Logistics Performance:</strong> Tracking shipping reliability by brand and delivery speed improvements against targets.</p>
+                </div>
+                <div>
+                    <img src="Screenshot-Geographic.png" alt="Geographic Map Page">
+                    <p style="font-size: 0.8rem; margin-top: 8px;"><strong>Market Distribution:</strong> Visualizing global sales density and identifying high-profit regional hubs.</p>
+                </div>
+                <div>
+                    <img src="Screenshot-Glossary.png" alt="Data Dictionary Page">
+                    <p style="font-size: 0.8rem; margin-top: 8px;"><strong>Data Dictionary:</strong> A centered, landscape-oriented glossary ensuring full transparency on all metric calculations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Connect With Me</h2>
+        <p>I am currently seeking entry-level data analyst opportunities in Northwest Arkansas and beyond.</p>
+        <div style="margin-top: 1.5rem;">
+            <a href="mailto:makena.gatere@gmail.com" style="text-decoration: none; color: var(--accent); font-weight: bold; margin-right: 20px;">
+                <i class="fas fa-envelope"></i> makena.gatere@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/yvonne-makena-gatere" target="_blank" style="text-decoration: none; color: var(--accent); font-weight: bold;">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Yvonne M-Gatere | Built for Data Impact</p>
+    <div style="margin-top: 1rem;">
+        <a href="https://github.com/makena-ym" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:makena.gatere@gmail.com"><i class="fas fa-barcode"></i></a> </div>
+</footer>
+
+</body>
+</html>
