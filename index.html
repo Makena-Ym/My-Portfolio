@@ -3,128 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yvonne M Gatere | Data Portfolio</title>
+    <title>Yvonne M-Gatere | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --bg: #f8f9fa;
+            --bg: #fdfbf9;
             --card-white: #ffffff;
             --accent-brown: #5d4037;
-            --text-dark: #2d3436;
-            --text-light: #636e72;
-            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --secondary-brown: #8d6e63;
+            --text-dark: #2d2422;
+            --text-light: #6d4c41;
+            --shadow: 0 15px 35px rgba(93, 64, 55, 0.12);
+            --border: #d7ccc8;
         }
 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text-dark); margin: 0; line-height: 1.6; }
+        * { box-sizing: border-box; transition: all 0.3s ease; }
+
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+            background: var(--bg); 
+            color: var(--text-dark); 
+            margin: 0; 
+            line-height: 1.8; 
+        }
         
         /* HERO SECTION */
-        .hero { display: flex; align-items: center; justify-content: center; padding: 100px 10%; background: white; gap: 50px; flex-wrap: wrap; }
-        .hero-text { flex: 1; min-width: 300px; }
-        .hero-text h1 { font-size: 3.5rem; margin: 0; color: var(--accent-brown); }
-        .hero-text p { font-size: 1.2rem; color: var(--text-light); max-width: 500px; }
+        .hero { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 100px 10%; 
+            background: #efebe9; 
+            gap: 60px; 
+            flex-wrap: wrap; 
+            border-bottom: 2px solid var(--border); 
+        }
+        .hero-text { flex: 1; min-width: 320px; }
+        .hero-text h1 { font-size: 3.5rem; margin: 0; color: var(--accent-brown); letter-spacing: -1.5px; }
+        .hero-text p { font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin-top: 15px; }
         
         .profile-container { position: relative; }
-        .profile-img { width: 280px; height: 280px; border-radius: 30px; object-fit: cover; transform: rotate(-3deg); border: 8px solid white; box-shadow: var(--shadow); }
+        .profile-img { 
+            width: 280px; 
+            height: 280px; 
+            border-radius: 25px; 
+            object-fit: cover; 
+            transform: rotate(-2deg); 
+            border: 10px solid white; 
+            box-shadow: var(--shadow); 
+        }
 
-        /* GRID SYSTEM */
-        .container { max-width: 1200px; margin: auto; padding: 50px 20px; }
-        .section-title { font-size: 2.5rem; margin-bottom: 40px; border-bottom: 3px solid var(--accent-brown); display: inline-block; }
+        /* CONTAINER */
+        .container { max-width: 1200px; margin: auto; padding: 80px 25px; }
+        .section-title { 
+            font-size: 2.5rem; 
+            margin-bottom: 50px; 
+            border-left: 6px solid var(--accent-brown); 
+            padding-left: 25px; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
         
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .project-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid #eee; }
-        .project-content { padding: 25px; }
+        /* FEATURED PROJECT CARD */
+        .featured-card { 
+            background: white; 
+            border-radius: 24px; 
+            overflow: hidden; 
+            box-shadow: var(--shadow); 
+            border: 1px solid var(--border); 
+            margin-bottom: 60px; 
+        }
+        .featured-header { padding: 50px; background: white; border-bottom: 1px solid #f0f0f0; }
+        .featured-header h3 { font-size: 2rem; margin: 10px 0; color: var(--accent-brown); }
         
-        /* IMAGE PLACEHOLDERS */
-        .screenshot-box { background: #f1f2f6; width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; color: #b2bec3; border-bottom: 1px solid #eee; overflow: hidden; }
-        .screenshot-box img { width: 100%; height: 100%; object-fit: cover; }
+        /* IMAGE GRID - 2X2 STYLE */
+        .featured-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
+            gap: 30px; 
+            padding: 40px; 
+            background: #faf9f8;
+        }
+        
+        .screenshot-item { 
+            background: white; 
+            border: 1px solid #eee; 
+            border-radius: 18px; 
+            padding: 25px; 
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .screenshot-item img { 
+            width: 100%; 
+            border-radius: 10px; 
+            border: 1px solid #f0f0f0;
+            margin-bottom: 20px; 
+        }
+        .screenshot-item h4 { margin: 0 0 10px 0; color: var(--accent-brown); font-size: 1.2rem; }
+        .screenshot-item p { font-size: 0.95rem; color: var(--text-light); margin: 0; }
 
-        .tag-row { margin-bottom: 15px; }
-        .tag { background: #efebe9; color: var(--accent-brown); padding: 5px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; margin-right: 5px; }
+        /* TAGS */
+        .tag-row { margin-bottom: 20px; }
+        .tag { 
+            background: #efebe9; 
+            color: var(--accent-brown); 
+            padding: 7px 15px; 
+            border-radius: 6px; 
+            font-size: 0.8rem; 
+            font-weight: 800; 
+            margin-right: 8px; 
+            text-transform: uppercase; 
+        }
 
-        .btn { display: inline-block; background: var(--accent-brown); color: white; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 15px; }
-        .btn:hover { background: #3e2723; }
+        /* SECONDARY GRID */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
+        .project-card { 
+            background: white; 
+            border-radius: 20px; 
+            padding: 35px; 
+            box-shadow: var(--shadow); 
+            border: 1px solid var(--border); 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-        footer { text-align: center; padding: 50px; background: white; margin-top: 50px; }
+        .btn { 
+            display: inline-block; 
+            background: var(--accent-brown); 
+            color: white; 
+            padding: 14px 30px; 
+            border-radius: 10px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin-top: 25px; 
+            text-align: center;
+        }
+        .btn:hover { background: var(--secondary-brown); transform: translateY(-3px); }
+
+        footer { text-align: center; padding: 80px 20px; background: #3e2723; color: #d7ccc8; }
+        footer a { color: white; text-decoration: none; font-weight: bold; }
+        
+        @media (max-width: 768px) {
+            .hero { padding: 60px 5%; }
+            .hero-text h1 { font-size: 2.5rem; }
+            .featured-grid { grid-template-columns: 1fr; padding: 20px; }
+            .profile-img { width: 220px; height: 220px; }
+        }
     </style>
 </head>
 <body>
 
 <section class="hero">
     <div class="hero-text">
-        <span class="tag">Available for Hire</span>
-        <h1>Yvonne M Gatere</h1>
-        <p>Data Analyst transforming raw datasets into strategic business stories. Expert in Medallion Architecture, SQL Server, and Power BI visualization.</p>
-        <div class="socials">
-            <a href="https://github.com/Makena-Ym" style="font-size: 1.5rem; color: var(--accent-brown);"><i class="fab fa-github"></i> GitHub</a>
+        <span class="tag" style="background:var(--accent-brown); color:white;">Portfolio 2026</span>
+        <h1>Yvonne M-Gatere</h1>
+        <p>I am a Data Analyst driven by the <strong>Medallion Architecture</strong> mindset. I build scalable SQL pipelines and high-performance Power BI dashboards that turn raw numbers into business gold.</p>
+        <div style="margin-top:30px;">
+            <a href="https://github.com/Makena-Ym" style="color: var(--accent-brown); text-decoration: none; font-weight: bold; font-size: 1.3rem;">
+                <i class="fab fa-github"></i> github.com/Makena-Ym
+            </a>
         </div>
     </div>
     <div class="profile-container">
-        <img src="profile.jpg" alt="Yvonne Profile" class="profile-img">
+        <img src="assets/profile.jpg" alt="Yvonne M-Gatere" class="profile-img">
     </div>
 </section>
 
 <div class="container">
-    <h2 class="section-title">Featured Projects</h2>
+    <h2 class="section-title">End-to-End: Global Electronics Strategic BI</h2>
     
+    <div class="featured-card">
+        <div class="featured-header">
+            <div class="tag-row">
+                <span class="tag">SQL Server</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Data Engineering</span>
+                <span class="tag">DAX</span>
+            </div>
+            <h3>Retail Intelligence Decision Support System</h3>
+            <p>A full-cycle analytics project transforming raw ERP CSV files into a multi-layered Data Warehouse. By pre-aggregating data in SQL Gold views, I achieved a 60% faster report refresh rate and delivered critical shipping efficiency insights.</p>
+            <a href="https://github.com/Makena-Ym/Global-Electronics" class="btn">Exploration Repository</a>
+        </div>
+
+        <div class="featured-grid">
+            <div class="screenshot-item">
+                <img src="assets/sql-gold-layer-1.png" alt="SQL View Development">
+                <h4>Gold Layer Logic: Execution View</h4>
+                <p>This SQL view pre-joins Sales, Products, and Customers at the database level. By calculating metrics like <code>ShippingStatus</code> in T-SQL, I removed the heavy processing load from Power BI, ensuring a seamless user experience.</p>
+            </div>
+            
+            <div class="screenshot-item">
+                <img src="assets/sql-gold-layer-2.png" alt="SQL Performance Aggregation">
+                <h4>Gold Layer Logic: Store Performance</h4>
+                <p>Using <code>LEFT JOIN</code> logic and <code>GROUP BY</code> aggregations, this script creates a summary view for geographic analysis. This architecture ensures that even stores with zero sales are accounted for, preventing data bias.</p>
+            </div>
+
+            <div class="screenshot-item">
+                <img src="assets/data-model-schema.png" alt="Power BI Star Schema">
+                <h4>Star Schema Architecture</h4>
+                <p>A clean Star Schema implementation in Power BI. I established 1-to-Many relationships between Dimension tables (Products, Stores, Customers) and the central Sales Fact table to ensure accurate filtering and efficient DAX calculations.</p>
+            </div>
+
+            <div class="screenshot-item">
+                <img src="assets/executive-summary.png" alt="Executive Overview Dashboard">
+                <h4>Executive Strategic Summary</h4>
+                <p>A high-contrast C-Suite dashboard featuring profit sparklines and high-level KPIs. This layout uses a custom Canva background to create "containers" that guide the CEO's eye to critical revenue and margin spikes.</p>
+            </div>
+
+            <div class="screenshot-item">
+                <img src="assets/geographic-deep-dive.png" alt="Geographic Analysis Dashboard">
+                <h4>Geographic Deep-Dive</h4>
+                <p>This visual isolates market penetration and regional profitability. It highlights the major discovery of the project: a 47% improvement in delivery times (7.29 to 3.83 days) across global shipping hubs.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Supporting Analytics Projects</h2>
     <div class="project-grid">
-
         <div class="project-card">
-            <div class="screenshot-box">
-                <img src="global-electronics-dashboard.png" alt="Power BI Dashboard Screenshot">
-            </div>
-            <div class="project-content">
-                <div class="tag-row"><span class="tag">Power BI</span> <span class="tag">SQL Server</span></div>
-                <h3>Global Electronics Strategic Analytics</h3>
-                <p>End-to-end BI solution using Medallion Architecture. Built a data refinery process from ERP sources to a Gold-layer reporting dashboard.</p>
-                <div class="screenshot-box" style="height: 120px; margin-top: 10px;">
-                    <img src="sql-transformation-code.png" alt="SQL Code Snippet">
-                </div>
-                <a href="https://github.com/Makena-Ym/Global-Electronics" class="btn">View Project</a>
-            </div>
+            <span class="tag">T-SQL</span>
+            <h3>Data Warehouse Implementation</h3>
+            <p>A masterclass in schema design. I built a central repository for disparate data sources, focusing on normalization and ETL performance for enterprise-scale reporting.</p>
+            <a href="https://github.com/Makena-Ym/DataWarehouse-Project" class="btn">View Architecture</a>
         </div>
 
         <div class="project-card">
-            <div class="screenshot-box">
-                <img src="dw-architecture.png" alt="Architecture Diagram">
-            </div>
-            <div class="project-content">
-                <div class="tag-row"><span class="tag">T-SQL</span> <span class="tag">Data Modeling</span></div>
-                <h3>Data Warehouse Implementation</h3>
-                <p>Designing a scalable warehouse structure for business intelligence, focusing on schema optimization and ETL efficiency.</p>
-                <a href="https://github.com/Makena-Ym/DataWarehouse-Project" class="btn">View Project</a>
-            </div>
+            <span class="tag">Python</span>
+            <h3>LEGO Evolution Analysis</h3>
+            <p>Using Pandas and Matplotlib, I performed a time-series analysis on 50 years of LEGO set data to uncover trends in set complexity and theme licensing costs.</p>
+            <a href="https://github.com/Makena-Ym/Lego-sets-analysis" class="btn">View Study</a>
         </div>
-
-        <div class="project-card">
-            <div class="screenshot-box">
-                <img src="lego-viz.png" alt="Python Plot">
-            </div>
-            <div class="project-content">
-                <div class="tag-row"><span class="tag">Python</span> <span class="tag">Pandas</span></div>
-                <h3>LEGO Sets Trend Analysis</h3>
-                <p>Statistical analysis of set complexity and theme popularity over time using Jupyter Notebooks and Matplotlib.</p>
-                <a href="https://github.com/Makena-Ym/Lego-sets-analysis" class="btn">View Project</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="screenshot-box">
-                <img src="layoffs-cleaning.png" alt="Data Cleaning Script">
-            </div>
-            <div class="project-content">
-                <div class="tag-row"><span class="tag">SQL</span> <span class="tag">Data Cleaning</span></div>
-                <h3>World Layoffs Data Cleaning</h3>
-                <p>A masterclass in T-SQL data transformation. Handling nulls, duplicates, and inconsistent formatting in global tech layoff data.</p>
-                <a href="https://github.com/Makena-Ym/WorldsLayoffs-Analysis" class="btn">View Project</a>
-            </div>
-        </div>
-
     </div>
 </div>
 
 <footer>
-    <p>Constructed by Yvonne M Gatere | 2026</p>
-    <p>Fayetteville, Arkansas • makenamugambi8@gmail.com</p>
+    <p>&copy; 2026 Yvonne M-Gatere | Portfolio Built for Impact</p>
+    <p>
+        <a href="mailto:makena.gatere@gmail.com"><i class="fas fa-envelope"></i> makena.gatere@gmail.com</a> | 
+        Fayetteville, Arkansas
+    </p>
 </footer>
 
 </body>
