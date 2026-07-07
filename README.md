@@ -1,4 +1,4 @@
-# Hi, I'm Yvonne M-Gatere 👋
+# Hi, I'm Yvonne M. Gatere 👋
 ### Data Analyst | SQL • Power BI • Python • Excel
 
 I am a dedicated Data Analyst specializing in transforming fragmented raw data into actionable business intelligence. My expertise lies in architecting robust data pipelines, advanced SQL modeling, and building high-impact visualizations that drive executive decision-making.
@@ -6,6 +6,11 @@ I am a dedicated Data Analyst specializing in transforming fragmented raw data i
 ---
 
 ### 🚀 Featured Projects
+
+#### 🏥 [Healthcare Data Analysis](https://github.com/Makena-Ym/Healthcareanalysis)
+* **The Goal:** Analyzed complex healthcare datasets to uncover critical insights into patient demographics, treatment outcomes, and operational medical trends.
+* **Tech Stack:** SQL, Power BI.
+* **Key Insight:** Built an interactive dashboard to track medical KPIs, optimize patient outcome tracking, and visualize demographic distributions for better healthcare delivery resource allocation.
 
 #### 🌍 [Global Electronics Strategic BI Solution](https://github.com/makena-ym/Global-Electronics-Analytics)
 * **The Goal:** Engineered an end-to-end BI system for a global retailer using a **Medallion Architecture** (Bronze, Silver, Gold) to provide a single version of truth for C-suite executives.
@@ -47,6 +52,6 @@ I am a dedicated Data Analyst specializing in transforming fragmented raw data i
 * **Portfolio:** [makena-ym.github.io/My-Portfolio/](https://makena-ym.github.io/My-Portfolio/)
 * **Email:** [makena.gatere@gmail.com](mailto:makena.gatere@gmail.com)
 
-
 ---
 *“Data is a precious thing and will last longer than the systems themselves.”* – Tim Berners-Lee
+
