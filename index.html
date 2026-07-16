@@ -6,8 +6,46 @@
     <title>Yvonne M. Gatere | Data Analyst Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Smooth transitions & subtle interactive hover effects keeping your original CSS styles intact */
+        .project-card {
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        }
+        .metric-badge {
+            background: rgba(139, 90, 43, 0.1); /* Matches your accent-brown */
+            color: var(--accent-brown);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .featured-grid img {
+            transition: transform 0.4s ease;
+        }
+        .screenshot-item:hover img {
+            transform: scale(1.02);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--accent-brown);
+            border: 2px solid var(--accent-brown);
+            margin-left: 10px;
+        }
+        .btn-outline:hover {
+            background: var(--accent-brown);
+            color: white;
+        }
+    </style>
 </head>
 <body>
+
     <section class="hero">
         <div class="hero-text">
             <span class="tag" style="background:var(--accent-brown); color:white;">Data Analyst Portfolio</span>
@@ -27,7 +65,39 @@
     <div class="container">
         <h2 class="section-title">My Projects</h2>
         <div class="project-grid">
-            
+
+            <!-- ================= NEW FEATURED PROJECT ================= -->
+            <div class="project-card large-card" style="grid-column: span 2; border-left: 5px solid var(--accent-brown);">
+                <div class="tag-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <div>
+                        <span class="tag">Excel</span>
+                        <span class="tag">Pivot Tables</span>
+                        <span class="tag">Procurement Strategy</span>
+                    </div>
+                    <div class="metric-badge">
+                        <i class="fas fa-chart-line"></i> Interactive Executive Dashboard
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 15px;">Walmart Sourcing & Procurement Strategy Dashboard</h3>
+                <p>An elegant, interactive sourcing intelligence solution designed to analyze supply chain KPIs, vendor distribution metrics, and cost optimization opportunities. This project features dynamic Excel dashboards powered by optimized Pivot Tables, advanced lookup logic, and executive-ready visual structures.</p>
+                
+                <div class="featured-grid" style="display: grid; grid-template-columns: 1fr; gap: 15px; margin: 20px 0;">
+                    <div class="screenshot-item" style="overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                        <img src="dashboard_screenshot.png.png" alt="Walmart Procurement Dashboard" style="width:100%; border-radius:8px; display: block;">
+                        <h4 style="margin-top: 10px; padding: 0 5px;">Sourcing Operations & Cost Optimization Hub</h4>
+                        <p style="font-size: 0.85rem; color: #666; padding: 0 5px 10px 5px;">Interactive slicers and pivot-driven structures tracking key vendor lead times, regional performance parameters, and margin analysis.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 15px;">
+                    <a href="https://github.com/Makena-Ym/Walmart-sourcing-procurement-strategy" target="_blank" class="btn">View Full Repository</a>
+                    <a href="https://github.com/Makena-Ym/Walmart-sourcing-procurement-strategy/blob/main/dashboard_screenshot.png.png" target="_blank" class="btn btn-outline"><i class="far fa-image"></i> View Dashboard Image</a>
+                </div>
+            </div>
+            <!-- ======================================================== -->
+
+            <!-- Existing Project: Healthcare Patient Analytics Dashboard -->
             <div class="project-card large-card" style="grid-column: span 2;">
                 <div class="tag-row">
                     <span class="tag">Power BI</span>
@@ -55,13 +125,14 @@
                     </div>
                     <div class="screenshot-item">
                         <img src="assets/INFOPAGE.png" alt="UI/UX Info Page" style="width:100%; border-radius:8px;">
-                        <h4>4.Info/Glossary</h4>
-                        <p style="font-size: 0.85rem; color: #666;">Clean navigation project documentation .</p>
+                        <h4>4. Info/Glossary</h4>
+                        <p style="font-size: 0.85rem; color: #666;">Clean navigation project documentation.</p>
                     </div>
                 </div>
                 <a href="https://github.com/Makena-Ym/Healthcareanalysis" target="_blank" class="btn">View Full Repository</a>
             </div>
 
+            <!-- Existing Project: Global Electronics Strategic BI Solution -->
             <div class="project-card large-card" style="grid-column: span 2;">
                 <div class="tag-row">
                     <span class="tag">SQL Server</span>
@@ -83,8 +154,7 @@
                         <p style="font-size: 0.85rem; color: #666;">Spatial analysis mapping customer density distributions and shipping times across regions.</p>
                     </div>
                     <div class="screenshot-item">
-                        <img src="assets/data-model-schema.png
-" alt="Model View Schema" style="width:100%; border-radius:8px;">
+                        <img src="assets/data-model-schema.png" alt="Model View Schema" style="width:100%; border-radius:8px;">
                         <h4>3. Power BI Star Schema Model</h4>
                         <p style="font-size: 0.85rem; color: #666;">Optimized relationships, dimension tables, and clean fact linkages for fast DAX query filtering.</p>
                     </div>
@@ -97,6 +167,7 @@
                 <a href="https://github.com/Makena-Ym/Global-Electronics" target="_blank" class="btn">View Repository</a>
             </div>
 
+            <!-- Grid Items -->
             <div class="project-card">
                 <span class="tag">SQL Server (T-SQL)</span>
                 <h3>World Layoffs Analysis</h3>
@@ -131,6 +202,7 @@
                 <p>A statistical time-series analysis exploring 50 years of shifting LEGO set themes, complex piece counts, and packaging transformations using Pandas data wrangling.</p>
                 <a href="https://github.com/Makena-Ym/Lego-sets-analysis" target="_blank" class="btn">View Code</a>
             </div>
+
         </div>
 
         <section id="contact" class="contact-section" style="margin-top: 100px;">
